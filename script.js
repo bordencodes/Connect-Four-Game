@@ -9,13 +9,13 @@ let gameGrid = document.querySelector('#gameGrid')
 let gameSpace = document.querySelector('.space')
 let gameOver = false
 const gameAlerts = document.querySelector('.gameAlerts')
-const playGame = document.querySelector('.playGame')
-const plagyAgain = document.querySelector('.playAgain')
-const resetGame = document.querySelector('.resetGame')
+const play = document.querySelector('.playGame')
+const replay = document.querySelector('.playAgain')
+const reset = document.querySelector('.resetGame')
 
 //Functions for game logic
 
-function playGame() {}
+playGame()
 
 function clickSpace() {}
 
@@ -32,6 +32,6 @@ function playAgain() {}
 function resetGame() {}
 
 //Evemt listeners
-playGame.addEventListener('click', playGame)
-playAgain.addEventListener('click', playAgain)
-resetGame.addEventListener('click', resetGame)
+play.addEventListener('click', playGame)
+replay.addEventListener('click', playAgain)
+reset.addEventListener('click', resetGame)

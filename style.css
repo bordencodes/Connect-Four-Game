@@ -1,6 +1,7 @@
 body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
+  background-color: ;
 }
 
 .scoreDisplay {
@@ -36,4 +37,21 @@ body {
   border-radius: 50%;
   border: 5px solid darkgray;
   margin: 5px;
+  cursor: pointer;
+}
+
+#player1 {
+  background-color:olivedrab;
+}
+
+#player2 {
+  background-color:goldenrod;
+}
+
+button {
+  background-color: darkgray;
+  margin: 20px auto;
+  border: 2px solid;
+  text-align: center;
+  padding: 10px;
 }
