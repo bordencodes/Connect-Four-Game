@@ -1,3 +1,30 @@
 body {
-  background-color: blue;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+.scoreDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  font-size: 25px;
+}
+
+#score {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 500px;
+}
+
+#gameGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  height: 600px;
+  background-color: darkgray;
+  border: 5px solid black;
+  margin: 10px auto;
 }
