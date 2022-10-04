@@ -40,11 +40,11 @@ body {
   cursor: pointer;
 }
 
-#player1 {
+#player1 .greenPiece {
   background-color:olivedrab;
 }
 
-#player2 {
+#player2 .goldPiece {
   background-color:goldenrod;
 }
 

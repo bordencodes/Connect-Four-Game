@@ -7,6 +7,7 @@ let scoreDisplay = document.querySelector('.score-board')
 let currentPlayer = 'Player 1'
 let gameGrid = document.querySelector('#gameGrid')
 let gameSpace = document.querySelector('.space')
+let spaceInUse = false
 let gameOver = false
 const gameAlerts = document.querySelector('.gameAlerts')
 const replay = document.querySelector('.playAgain')
@@ -21,6 +22,7 @@ function playGame() {
     })
     gameSpace.forEach(function (gameSpace) {
       gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+      spaceInUse = true
     })
   }
 }
