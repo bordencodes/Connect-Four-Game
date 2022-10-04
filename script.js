@@ -108,7 +108,24 @@ function updateScore() {
 }
 gameOver = true
 
-function playAgain() {}
+function playAgain() {
+  currentPlayer === 1
+  gameBoard = [
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '']
+  ]
+  gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+  gameSpace.forEach(function (gameSpace) {
+    gameSpace.innerHTML = ''
+  })
+}
+
+spaceInUse = true
+gameOver = false
 
 function resetGame() {}
 
