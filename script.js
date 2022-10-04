@@ -153,5 +153,5 @@ function resetGame() {
 }
 
 //Evemt listeners
-// replay.addEventListener('click', playAgain)
-// reset.addEventListener('click', resetGame)
+replay.addEventListener('click', playAgain)
+reset.addEventListener('click', resetGame)
