@@ -1,7 +1,6 @@
 body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
-  background-color: ;
 }
 
 .scoreDisplay {
@@ -20,6 +19,14 @@ body {
   width: 500px;
 }
 
+#p1 {
+  background-color:olivedrab;
+}
+
+#p2{
+  background-color:goldenrod;
+}
+
 #gameGrid {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +37,10 @@ body {
   margin: 10px auto;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 .space {
   background-color: white;
   width: 80px;
@@ -38,14 +49,6 @@ body {
   border: 5px solid darkgray;
   margin: 5px;
   cursor: pointer;
-}
-
-#player1 .greenPiece {
-  background-color:olivedrab;
-}
-
-#player2 .goldPiece {
-  background-color:goldenrod;
 }
 
 button {

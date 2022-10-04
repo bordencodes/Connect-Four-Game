@@ -4,8 +4,16 @@ let player2 = 0
 let score1 = document.querySelector('#score1')
 let score2 = document.querySelector('#score2')
 let scoreDisplay = document.querySelector('.score-board')
-let currentPlayer = 'Player 1'
+let currentPlayer = 1
 let gameGrid = document.querySelector('#gameGrid')
+let emptyGrid = [
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '']
+]
 let gameSpace = document.querySelector('.space')
 let spaceInUse = false
 let gameOver = false
@@ -20,11 +28,11 @@ function playGame() {
     gameSpace[i].addEventListener('click', function () {
       clickSpace(i)
     })
-    gameSpace.forEach(function (gameSpace) {
-      gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
-      spaceInUse = true
-    })
   }
+  gameSpace.forEach(function (gameSpace) {
+    gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+    spaceInUse = true
+  })
 }
 
 function clickSpace() {}
