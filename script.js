@@ -95,7 +95,18 @@ function checkForWinner() {
   }
 }
 
-function updateScore() {}
+function updateScore() {
+  if (currentPlayer === 1) {
+    player1 = player1 + 1
+    score1.innerHTML = player1
+  } else if (currentPlayer === 2) {
+    player2 = player2 + 1
+    score2.innerHTML = player2
+  } else {
+    return
+  }
+}
+gameOver = true
 
 function playAgain() {}
 
