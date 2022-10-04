@@ -5,8 +5,7 @@ let score1 = document.querySelector('#score1')
 let score2 = document.querySelector('#score2')
 let scoreDisplay = document.querySelector('.score-board')
 let currentPlayer = 1
-let gameGrid = document.querySelector('#gameGrid')
-let emptyGrid = [
+let gameGrid = [
   ['', '', '', '', '', '', ''],
   ['', '', '', '', '', '', ''],
   ['', '', '', '', '', '', ''],
@@ -18,6 +17,7 @@ let gameSpace = document.querySelector('.space')
 let spaceInUse = false
 let gameOver = false
 const gameAlerts = document.querySelector('.gameAlerts')
+// const winGame = [[x, x, x, x]]
 const replay = document.querySelector('.playAgain')
 const reset = document.querySelector('.resetGame')
 
