@@ -127,7 +127,30 @@ function playAgain() {
 spaceInUse = true
 gameOver = false
 
-function resetGame() {}
+function resetGame() {
+  if (player1 > 0 || player2 > 0) {
+    player1 = 0
+    player2 = 0
+    score1.innerHTML = player1
+    score2.innerHTML = player2
+  }
+
+  currentPlayer = 1
+  gameBoard = [
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', ''],
+    ['', '', '', '', '', '', '']
+  ]
+  gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+  gameSpace.forEach(function (gameSpace) {
+    gameSpace.innerHTML = ''
+  })
+  spaceInUse = true
+  gameOver = false
+}
 
 //Evemt listeners
 // replay.addEventListener('click', playAgain)
