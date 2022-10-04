@@ -25,17 +25,17 @@ const reset = document.querySelector('.resetGame')
 
 //Functions for game logic
 
-// playGame()
-
-for (let i = 0; i < gameSpace.length; i++) {
-  gameSpace[i].addEventListener('click', function () {
-    clickSpace(i)
+function playGame() {
+  for (let i = 0; i < gameSpace.length; i++) {
+    gameSpace[i].addEventListener('click', function () {
+      clickSpace(i)
+    })
+  }
+  gameSpace.forEach(function (gameSpace) {
+    gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+    spaceInUse = true
   })
 }
-gameSpace.forEach(function (gameSpace) {
-  gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
-  spaceInUse = true
-})
 
 function clickSpace(index) {
   if (gameBoard[index] != '' || !spaceInUse || gameOver) {
@@ -150,6 +150,17 @@ function resetGame() {
   })
   spaceInUse = true
   gameOver = false
+}
+
+playGame()
+if (gameOver) {
+  gameAlerts.innerHTML = `${currentPlayer} wins game!`
+  spaceInUse = false
+} else if (!gameBoard.includes('')) {
+  gameAlerts.innerHTML = `It's a draw!`
+  spaceInUse = false
+} else {
+  switchPlayer()
 }
 
 //Evemt listeners
