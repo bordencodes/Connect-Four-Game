@@ -65,7 +65,35 @@ function switchPlayer() {
   }
 }
 
-function checkForWinner() {}
+function checkForWinner() {
+  for (let i = 0; i < connectFour.length; i++) {
+    const win = connectFour[i]
+    const space1 = gameBoard[win[0]]
+    const space2 = gameBoard[win[1]]
+    const space3 = gameBoard[win[2]]
+    const space4 = gameBoard[win[3]]
+    if (space1 == '' || space2 == '' || space3 == '' || space4 == '') {
+      continue
+    }
+    if (space1 == space2 && space2 == space3 && space3 == space4) {
+      gameOver = true
+      gameAlerts.innerHTML = `${currentPlayer} wins!`
+      updateScore()
+      break
+    }
+    let notDraw = false
+    for (let j = 0; j < gameBoard.length; j++) {
+      if (gameBoard[j] == '') {
+        notDraw = true
+        break
+      }
+    }
+    if (notDraw == false) {
+      gameOver = true
+      gameAlerts.innerHTML = `It's a draw!`
+    }
+  }
+}
 
 function updateScore() {}
 
