@@ -19,13 +19,6 @@ body {
   width: 500px;
 }
 
-#p1 {
-  background-color:olivedrab;
-}
-
-#p2{
-  background-color:goldenrod;
-}
 
 #gameGrid {
   display: flex;
@@ -35,6 +28,14 @@ body {
   background-color: darkgray;
   border: 5px solid black;
   margin: 10px auto;
+}
+
+#p1 {
+  background-color:olivedrab;
+}
+
+#p2{
+  background-color:goldenrod;
 }
 
 h2 {
