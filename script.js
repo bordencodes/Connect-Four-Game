@@ -9,13 +9,21 @@ let gameGrid = document.querySelector('#gameGrid')
 let gameSpace = document.querySelector('.space')
 let gameOver = false
 const gameAlerts = document.querySelector('.gameAlerts')
-const play = document.querySelector('.playGame')
 const replay = document.querySelector('.playAgain')
 const reset = document.querySelector('.resetGame')
 
 //Functions for game logic
 
-playGame()
+function playGame() {
+  for (let i = 0; i < gameSpace.length; i++) {
+    gameSpace[i].addEventListener('click', function () {
+      clickSpace(i)
+    })
+    gameSpace.forEach(function (gameSpace) {
+      gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+    })
+  }
+}
 
 function clickSpace() {}
 
@@ -32,6 +40,5 @@ function playAgain() {}
 function resetGame() {}
 
 //Evemt listeners
-play.addEventListener('click', playGame)
-replay.addEventListener('click', playAgain)
-reset.addEventListener('click', resetGame)
+// replay.addEventListener('click', playAgain)
+// reset.addEventListener('click', resetGame)
