@@ -1,3 +1,21 @@
+.introH1 {
+  font-size: 50px;
+  background-color: white;
+}
+
+.introP {
+  font-size: 25px;
+  width: auto;
+}
+
+.playGame {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
@@ -30,13 +48,6 @@ body {
   margin: 10px auto;
 }
 
-#p1 {
-  background-color:olivedrab;
-}
-
-#p2{
-  background-color:goldenrod;
-}
 
 h2 {
   font-size: 30px;
@@ -52,6 +63,14 @@ h2 {
   cursor: pointer;
 }
 
+.p1 {
+  background-color:olivedrab;
+}
+
+.p2{
+  background-color:goldenrod;
+}
+
 button {
   background-color: darkgray;
   margin: 20px auto;
@@ -59,4 +78,5 @@ button {
   text-align: center;
   padding: 10px;
   cursor: pointer;
+  text-decoration: none;
 }

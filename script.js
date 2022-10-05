@@ -4,9 +4,7 @@ let player2 = 0
 let score1 = document.querySelector('#score1')
 let score2 = document.querySelector('#score2')
 let scoreDisplay = document.querySelector('.score-board')
-let p1 = document.getElementById('p1')
-let p2 = document.getElementById('p2')
-let currentPlayer = 1
+let currentPlayer = 'Player 1'
 let gameBoard = [
   ['', '', '', '', '', '', ''],
   ['', '', '', '', '', '', ''],
@@ -122,18 +120,26 @@ function updateSpace(gameGrid) {
 }
 
 function switchPlayer() {
-  if (currentPlayer === 1 && !gameOver) {
-    gameSpace[i].classList.add('space')
-    currentPlayer = 2
-    p1.innerHTML = currentPlayer
-    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
-  } else if (currentPlayer === 2 && !gameOver) {
-    gameSpace[i].classList.add('space')
-    currentPlayer = 1
-    p2.innerHTML = currentPlayer
-    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+  for (let i = 0; i < gameSpace.length; i++) {
+    gameSpace[i].addEventListener('click', function () {
+      if (currentPlayer === 'Player 1' && !gameOver) {
+        gameSpace[i].classList.add('p1')
+        currentPlayer = 'Player 2'
+        gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+      } else if (currentPlayer === 'Player 2' && !gameOver) {
+        gameSpace[i].classList.add('p2')
+        currentPlayer = 'Player 1'
+        gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+      }
+    })
   }
 }
+
+// let gamePiece1 = document.querySelectorAll('.space')[35]
+// gamePiece1.classList.add('p1')
+
+// let gamePiece2 = document.querySelectorAll('.space')[36]
+// gamePiece2.classList.add('p2')
 
 function checkForWinner() {
   for (let i = 0; i < connectFour.length; i++) {
@@ -166,20 +172,20 @@ function checkForWinner() {
 }
 
 function updateScore() {
-  if (currentPlayer === 1) {
+  if (currentPlayer === 'Player 1') {
     player1 = player1 + 1
     score1.innerHTML = player1
-  } else if (currentPlayer === 2) {
+  } else if (currentPlayer === 'Player 2') {
     player2 = player2 + 1
     score2.innerHTML = player2
   } else {
     return
   }
+  gameOver = true
 }
-gameOver = true
 
 function playAgain() {
-  currentPlayer === 1
+  currentPlayer === 'Player 1'
   gameBoard = [
     ['', '', '', '', '', '', ''],
     ['', '', '', '', '', '', ''],
@@ -192,10 +198,9 @@ function playAgain() {
   gameSpace.forEach(function (gameSpace) {
     gameSpace.innerHTML = ''
   })
+  spaceInUse = true
+  gameOver = false
 }
-
-spaceInUse = true
-gameOver = false
 
 function resetGame() {
   if (player1 > 0 || player2 > 0) {
@@ -205,7 +210,7 @@ function resetGame() {
     score2.innerHTML = player2
   }
 
-  currentPlayer = 1
+  currentPlayer = 'Player 1'
   gameBoard = [
     ['', '', '', '', '', '', ''],
     ['', '', '', '', '', '', ''],
@@ -228,6 +233,7 @@ if (gameOver) {
   spaceInUse = false
 } else if (!gameBoard.includes('')) {
   gameAlerts.innerHTML = `It's a draw!`
+  console.log('hit the condition')
   spaceInUse = false
 } else {
   switchPlayer()
