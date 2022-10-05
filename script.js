@@ -1,8 +1,8 @@
 //Global variables
 let player1 = 0
 let player2 = 0
-let score1 = document.querySelector('#score1')
-let score2 = document.querySelector('#score2')
+let score1 = document.querySelector('.score1')
+let score2 = document.querySelector('.score2')
 let scoreDisplay = document.querySelector('.score-board')
 let currentPlayer = 'Player 1'
 let gameBoard = [
@@ -97,6 +97,7 @@ function playGame() {
   for (let i = 0; i < gameSpace.length; i++) {
     gameSpace[i].addEventListener('click', function () {
       clickSpace(i)
+      console.log(gameSpace[i])
     })
   }
   gameSpace.forEach(function (gameSpace) {
@@ -106,10 +107,11 @@ function playGame() {
 }
 
 function clickSpace(index) {
-  if (gameBoard[index] != '' || !spaceInUse || gameOver) {
-    return
-  }
-  updateSpace(index)
+  // if (gameBoard[index] != '' || !spaceInUse || gameOver) {
+  //   console.log('function check')
+  //   return
+  // }
+  // updateSpace(index)
   checkForWinner()
   switchPlayer()
 }
@@ -120,18 +122,14 @@ function updateSpace(gameGrid) {
 }
 
 function switchPlayer() {
-  for (let i = 0; i < gameSpace.length; i++) {
-    gameSpace[i].addEventListener('click', function () {
-      if (currentPlayer === 'Player 1' && !gameOver) {
-        gameSpace[i].classList.add('p1')
-        currentPlayer = 'Player 2'
-        gameAlerts.innerHTML = `${currentPlayer}'s turn!`
-      } else if (currentPlayer === 'Player 2' && !gameOver) {
-        gameSpace[i].classList.add('p2')
-        currentPlayer = 'Player 1'
-        gameAlerts.innerHTML = `${currentPlayer}'s turn!`
-      }
-    })
+  if (currentPlayer === 'Player 1' && !gameOver) {
+    gameSpace[i].classList.add('p1')
+    currentPlayer = 'Player 2'
+    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+  } else if (currentPlayer === 'Player 2' && !gameOver) {
+    gameSpace[i].classList.add('p2')
+    currentPlayer = 'Player 1'
+    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
   }
 }
 
@@ -142,8 +140,8 @@ function switchPlayer() {
 // gamePiece2.classList.add('p2')
 
 function checkForWinner() {
-  for (let i = 0; i < connectFour.length; i++) {
-    const win = connectFour[i]
+  for (let i = 0; i < gameSpace.length; i++) {
+    const win = gameSpace[i]
     const space1 = gameBoard[win[0]]
     const space2 = gameBoard[win[1]]
     const space3 = gameBoard[win[2]]
@@ -233,7 +231,6 @@ if (gameOver) {
   spaceInUse = false
 } else if (!gameBoard.includes('')) {
   gameAlerts.innerHTML = `It's a draw!`
-  console.log('hit the condition')
   spaceInUse = false
 } else {
   switchPlayer()
