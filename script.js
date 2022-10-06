@@ -147,13 +147,13 @@ const playGame = () => {
       clickSpace(i)
     })
   }
-  gameSpace.forEach(function (gameSpace) {
+  gameSpace.forEach((gameSpace) => {
     gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
     spaceInUse = true
   })
 }
 
-function clickSpace(index) {
+const clickSpace = (index) => {
   if (gameBoard[index] != '' || !spaceInUse || gameOver) {
     return
   }
@@ -162,7 +162,7 @@ function clickSpace(index) {
   switchPlayer()
 }
 
-function updateSpace(selection) {
+const updateSpace = (selection) => {
   gameBoard[selection] = currentPlayer
   if (currentPlayer === 'Player 1') {
     gameSpace[selection].classList.add('p1')
@@ -171,7 +171,7 @@ function updateSpace(selection) {
   }
 }
 
-function switchPlayer() {
+const switchPlayer = () => {
   if (currentPlayer === 'Player 1' && !gameOver) {
     currentPlayer = 'Player 2'
     gameAlerts.innerHTML = `${currentPlayer}'s turn!`
@@ -181,19 +181,15 @@ function switchPlayer() {
   }
 }
 
-function checkForWinner() {
+const checkForWinner = () => {
   for (let i = 0; i < winGame.length; i++) {
     const win = winGame[i]
-    console.log(gameBoard)
-    console.log(winGame[0])
-
     const space1 = gameBoard[winGame[i][0]]
     const space2 = gameBoard[winGame[i][1]]
     const space3 = gameBoard[winGame[i][2]]
     const space4 = gameBoard[winGame[i][3]]
 
     //gate keeper - this if statement will check if the grid entirely populated. If it's not, it will stop checking the current win scenario and go to the next scenario.
-    console.log(space1, space2, space3, space4)
     if (space1 == '' || space2 == '' || space3 == '' || space4 == '') {
       continue
     }
@@ -219,7 +215,7 @@ function checkForWinner() {
   }
 }
 
-function updateScore() {
+const updateScore = () => {
   if (currentPlayer === 'Player 1') {
     player1 = player1 + 1
     score1.innerHTML = player1
@@ -232,7 +228,7 @@ function updateScore() {
   gameOver = true
 }
 
-function playAgain() {
+const playAgain = () => {
   currentPlayer === 'Player 1'
   gameBoard = [
     '',
@@ -279,7 +275,6 @@ function playAgain() {
     ''
   ]
   gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
-
   gameSpace.forEach((clear) => {
     clear.classList.remove('p1')
     clear.classList.remove('p2')
@@ -288,7 +283,7 @@ function playAgain() {
   gameOver = false
 }
 
-function resetGame() {
+const resetGame = () => {
   if (player1 > 0 || player2 > 0) {
     player1 = 0
     player2 = 0
