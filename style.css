@@ -1,20 +1,19 @@
-.introH1 {
-  font-size: 50px;
-  background-color: white;
-}
-
-.introP {
-  font-size: 25px;
-  width: auto;
-}
-
 .playGame {
   font-size: 18px;
+  background-color: white;
+  border: 5px solid black;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+h1 {
+  font-size: 75px;
+  margin-bottom: 0;
+  background-color: darkgray;
+  border: 5px solid black;
 }
 
 body {
@@ -80,4 +79,18 @@ button {
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.introPage{
+background-color: darkgray;
+}
+
+.introH1 {
+  font-size: 50px;
+  background-color: white;
+}
+
+.introP {
+  font-size: 25px;
+  width: auto;
 }

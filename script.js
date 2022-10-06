@@ -6,12 +6,48 @@ let score2 = document.querySelector('.score2')
 let scoreDisplay = document.querySelector('.score-board')
 let currentPlayer = 'Player 1'
 let gameBoard = [
-  ['', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '']
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  ''
 ]
 let gameSpace = document.querySelectorAll('.space')
 let spaceInUse = false
@@ -97,7 +133,6 @@ function playGame() {
   for (let i = 0; i < gameSpace.length; i++) {
     gameSpace[i].addEventListener('click', function () {
       clickSpace(i)
-      console.log(gameSpace[i])
     })
   }
   gameSpace.forEach(function (gameSpace) {
@@ -107,45 +142,47 @@ function playGame() {
 }
 
 function clickSpace(index) {
-  // if (gameBoard[index] != '' || !spaceInUse || gameOver) {
-  //   console.log('function check')
-  //   return
-  // }
-  // updateSpace(index)
+  if ((gameBoard[index] = !'' || !spaceInUse || gameOver)) {
+    return
+  }
+  updateSpace(index)
   checkForWinner()
-  switchPlayer()
+  switchPlayer(gameGrid)
 }
 
 function updateSpace(gameGrid) {
-  gameBoard[gameGrid] = currentPlayer
-  gameSpace[gameGrid].innerHTML = currentPlayer
-}
-
-function switchPlayer() {
-  if (currentPlayer === 'Player 1' && !gameOver) {
-    gameSpace[i].classList.add('p1')
-    currentPlayer = 'Player 2'
-    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
-  } else if (currentPlayer === 'Player 2' && !gameOver) {
-    gameSpace[i].classList.add('p2')
-    currentPlayer = 'Player 1'
-    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+  for (let i = 0; i < gameSpace.length; i++) {
+    gameSpace[i].addEventListener('click', function () {
+      // gameBoard[gameGrid] = currentPlayer
+      // gameSpace[gameGrid] = currentPlayer
+    })
+    if (currentPlayer === 'Player 1') {
+      gameSpace[i].classList.add('p1')
+    } else if (currentPlayer === 'Player 2') {
+      gameSpace[i].classList.add('p2')
+    }
   }
 }
 
-// let gamePiece1 = document.querySelectorAll('.space')[35]
-// gamePiece1.classList.add('p1')
-
-// let gamePiece2 = document.querySelectorAll('.space')[36]
-// gamePiece2.classList.add('p2')
+function switchPlayer() {
+  for (let i = 0; i < gameSpace.length; i++) {
+    if (currentPlayer === 'Player 1' && !gameOver) {
+      currentPlayer = 'Player 2'
+      gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+    } else if (currentPlayer === 'Player 2' && !gameOver) {
+      currentPlayer = 'Player 1'
+      gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+    }
+  }
+}
 
 function checkForWinner() {
-  for (let i = 0; i < gameSpace.length; i++) {
-    const win = gameSpace[i]
-    const space1 = gameBoard[win[0]]
-    const space2 = gameBoard[win[1]]
-    const space3 = gameBoard[win[2]]
-    const space4 = gameBoard[win[3]]
+  for (let i = 0; i < winGame.length; i++) {
+    const win = winGame[i]
+    const space1 = gameBoard[winGame[0]]
+    const space2 = gameBoard[winGame[1]]
+    const space3 = gameBoard[winGame[2]]
+    const space4 = gameBoard[winGame[3]]
     if (space1 == '' || space2 == '' || space3 == '' || space4 == '') {
       continue
     }
@@ -185,12 +222,48 @@ function updateScore() {
 function playAgain() {
   currentPlayer === 'Player 1'
   gameBoard = [
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', '']
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    ''
   ]
   gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
   gameSpace.forEach(function (gameSpace) {
@@ -210,12 +283,48 @@ function resetGame() {
 
   currentPlayer = 'Player 1'
   gameBoard = [
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', ''],
-    ['', '', '', '', '', '', '']
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    ''
   ]
   gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
   gameSpace.forEach(function (gameSpace) {
