@@ -178,7 +178,7 @@ const checkForWinner = () => {
     const space3 = gameBoard[winGame[i][2]]
     const space4 = gameBoard[winGame[i][3]]
 
-    // Gate keeper - this if statement will check if the grid entirely populated.
+    // This if statement will check if the grid entirely populated.
     //If it's not, it will stop checking the current win scenario and go to the next scenario.
 
     if (space1 == '' || space2 == '' || space3 == '' || space4 == '') {
@@ -194,17 +194,18 @@ const checkForWinner = () => {
       updateScore()
       break
     }
-    let notDraw = false
-    for (let j = 0; j < gameBoard.length; j++) {
-      if (gameBoard[j] == '') {
-        notDraw = true
-        break
-      }
+  }
+
+  let notDraw = false
+  for (let i = 0; i < gameBoard.length; i++) {
+    if (gameBoard[i] == '') {
+      notDraw = true
+      break
     }
-    if (notDraw == false) {
-      gameOver = true
-      gameAlerts.innerHTML = `It's a draw!`
-    }
+  }
+  if (notDraw == false) {
+    gameOver = true
+    gameAlerts.innerHTML = `It's a draw!`
   }
 }
 

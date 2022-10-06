@@ -37,7 +37,6 @@ body {
   width: 500px;
 }
 
-
 #gameGrid {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +46,6 @@ body {
   border: 5px solid black;
   margin: 10px auto;
 }
-
 
 h2 {
   font-size: 30px;
