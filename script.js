@@ -129,7 +129,19 @@ const reset = document.querySelector('.resetGame')
 
 //Functions for game logic
 
-function playGame() {
+// function playGame() {
+//   for (let i = 0; i < gameSpace.length; i++) {
+//     gameSpace[i].addEventListener('click', function () {
+//       clickSpace(i)
+//     })
+//   }
+//   gameSpace.forEach(function (gameSpace) {
+//     gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
+//     spaceInUse = true
+//   })
+// }
+
+const playGame = () => {
   for (let i = 0; i < gameSpace.length; i++) {
     gameSpace[i].addEventListener('click', function () {
       clickSpace(i)
