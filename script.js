@@ -1,4 +1,5 @@
-//Global variables
+// Global variables
+
 let player1 = 0
 let player2 = 0
 let score1 = document.querySelector('.score1')
@@ -129,18 +130,6 @@ const reset = document.querySelector('.resetGame')
 
 //Functions for game logic
 
-// function playGame() {
-//   for (let i = 0; i < gameSpace.length; i++) {
-//     gameSpace[i].addEventListener('click', function () {
-//       clickSpace(i)
-//     })
-//   }
-//   gameSpace.forEach(function (gameSpace) {
-//     gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
-//     spaceInUse = true
-//   })
-// }
-
 const playGame = () => {
   for (let i = 0; i < gameSpace.length; i++) {
     gameSpace[i].addEventListener('click', function () {
@@ -189,12 +178,16 @@ const checkForWinner = () => {
     const space3 = gameBoard[winGame[i][2]]
     const space4 = gameBoard[winGame[i][3]]
 
-    //gate keeper - this if statement will check if the grid entirely populated. If it's not, it will stop checking the current win scenario and go to the next scenario.
+    // Gate keeper - this if statement will check if the grid entirely populated.
+    //If it's not, it will stop checking the current win scenario and go to the next scenario.
+
     if (space1 == '' || space2 == '' || space3 == '' || space4 == '') {
       continue
     }
 
-    //This is checking to see if the there are four game spaces that are equal to each other. If so, that signifies a win.
+    //This is checking to see if the there are four game spaces that are equal to each other.
+    //If so, that signifies a win.
+
     if (space1 == space2 && space2 == space3 && space3 == space4) {
       gameOver = true
       gameAlerts.innerHTML = `${currentPlayer} wins!`
@@ -346,16 +339,7 @@ const resetGame = () => {
 }
 
 playGame()
-// if (gameOver) {
-//   gameAlerts.innerHTML = `${currentPlayer} wins game!`
-//   spaceInUse = false
-// } else if (!gameBoard.includes('')) {
-//   gameAlerts.innerHTML = `It's a draw!`
-//   spaceInUse = false
-// } else {
-//   switchPlayer()
-// }
 
-//Evemt listeners
+// Event listeners
 replay.addEventListener('click', playAgain)
 reset.addEventListener('click', resetGame)
