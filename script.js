@@ -54,7 +54,7 @@ let spaceInUse = false
 let gameOver = false
 const gameAlerts = document.querySelector('.gameAlerts')
 const winGame = [
-  [0, 1, 3, 4],
+  [0, 1, 2, 3],
   [0, 7, 14, 21],
   [0, 8, 16, 24],
   [1, 8, 15, 22],
@@ -142,50 +142,52 @@ function playGame() {
 }
 
 function clickSpace(index) {
-  if ((gameBoard[index] = !'' || !spaceInUse || gameOver)) {
+  if (gameBoard[index] != '' || !spaceInUse || gameOver) {
     return
   }
   updateSpace(index)
   checkForWinner()
-  switchPlayer(gameGrid)
+  switchPlayer()
 }
 
-function updateSpace(gameGrid) {
-  for (let i = 0; i < gameSpace.length; i++) {
-    gameSpace[i].addEventListener('click', function () {
-      // gameBoard[gameGrid] = currentPlayer
-      // gameSpace[gameGrid] = currentPlayer
-    })
-    if (currentPlayer === 'Player 1') {
-      gameSpace[i].classList.add('p1')
-    } else if (currentPlayer === 'Player 2') {
-      gameSpace[i].classList.add('p2')
-    }
+function updateSpace(selection) {
+  gameBoard[selection] = currentPlayer
+  // console.log(gameBoard)
+  if (currentPlayer === 'Player 1') {
+    gameSpace[selection].classList.add('p1')
+  } else if (currentPlayer === 'Player 2') {
+    gameSpace[selection].classList.add('p2')
   }
 }
 
 function switchPlayer() {
-  for (let i = 0; i < gameSpace.length; i++) {
-    if (currentPlayer === 'Player 1' && !gameOver) {
-      currentPlayer = 'Player 2'
-      gameAlerts.innerHTML = `${currentPlayer}'s turn!`
-    } else if (currentPlayer === 'Player 2' && !gameOver) {
-      currentPlayer = 'Player 1'
-      gameAlerts.innerHTML = `${currentPlayer}'s turn!`
-    }
+  if (currentPlayer === 'Player 1' && !gameOver) {
+    currentPlayer = 'Player 2'
+    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
+  } else if (currentPlayer === 'Player 2' && !gameOver) {
+    currentPlayer = 'Player 1'
+    gameAlerts.innerHTML = `${currentPlayer}'s turn!`
   }
 }
 
 function checkForWinner() {
   for (let i = 0; i < winGame.length; i++) {
     const win = winGame[i]
-    const space1 = gameBoard[winGame[0]]
-    const space2 = gameBoard[winGame[1]]
-    const space3 = gameBoard[winGame[2]]
-    const space4 = gameBoard[winGame[3]]
+    console.log(gameBoard)
+    console.log(winGame[0])
+
+    const space1 = gameBoard[winGame[i][0]]
+    const space2 = gameBoard[winGame[i][1]]
+    const space3 = gameBoard[winGame[i][2]]
+    const space4 = gameBoard[winGame[i][3]]
+
+    //gate keeper - this if statement will check if the grid entirely populated. If it's not, it will stop checking the current win scenario and go to the next scenario.
+    console.log(space1, space2, space3, space4)
     if (space1 == '' || space2 == '' || space3 == '' || space4 == '') {
       continue
     }
+
+    //This is checking to see if the there are four game spaces that are equal to each other. If so, that signifies a win.
     if (space1 == space2 && space2 == space3 && space3 == space4) {
       gameOver = true
       gameAlerts.innerHTML = `${currentPlayer} wins!`
@@ -335,15 +337,15 @@ function resetGame() {
 }
 
 playGame()
-if (gameOver) {
-  gameAlerts.innerHTML = `${currentPlayer} wins game!`
-  spaceInUse = false
-} else if (!gameBoard.includes('')) {
-  gameAlerts.innerHTML = `It's a draw!`
-  spaceInUse = false
-} else {
-  switchPlayer()
-}
+// if (gameOver) {
+//   gameAlerts.innerHTML = `${currentPlayer} wins game!`
+//   spaceInUse = false
+// } else if (!gameBoard.includes('')) {
+//   gameAlerts.innerHTML = `It's a draw!`
+//   spaceInUse = false
+// } else {
+//   switchPlayer()
+// }
 
 //Evemt listeners
 replay.addEventListener('click', playAgain)
