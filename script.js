@@ -152,7 +152,6 @@ function clickSpace(index) {
 
 function updateSpace(selection) {
   gameBoard[selection] = currentPlayer
-  // console.log(gameBoard)
   if (currentPlayer === 'Player 1') {
     gameSpace[selection].classList.add('p1')
   } else if (currentPlayer === 'Player 2') {
@@ -268,8 +267,10 @@ function playAgain() {
     ''
   ]
   gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
-  gameSpace.forEach(function (gameSpace) {
-    gameSpace.innerHTML = ''
+
+  gameSpace.forEach((clear) => {
+    clear.classList.remove('p1')
+    clear.classList.remove('p2')
   })
   spaceInUse = true
   gameOver = false
@@ -329,8 +330,9 @@ function resetGame() {
     ''
   ]
   gameAlerts.innerHTML = `It's ${currentPlayer}'s turn!`
-  gameSpace.forEach(function (gameSpace) {
-    gameSpace.innerHTML = ''
+  gameSpace.forEach((clear) => {
+    clear.classList.remove('p1')
+    clear.classList.remove('p2')
   })
   spaceInUse = true
   gameOver = false
