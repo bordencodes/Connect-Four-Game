@@ -18,7 +18,7 @@
 
 I am utilizing Trello to begin the planning process and organize the keys task to complete this project.
 
-[TrelloBoard](https://trello.com/invite/b/G2YIjiFZ/94aa24b4cacbf9cc5b444ac75d19f22d/week-3-connect-four-game)
+View [Trello Board](https://trello.com/invite/b/G2YIjiFZ/94aa24b4cacbf9cc5b444ac75d19f22d/week-3-connect-four-game)
 
 ---
 
