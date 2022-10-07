@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### This project is an online Connect Four game, a two-player game designed to be played using a six-row by seven-column grid. The game's objective is to win by being the first player to have four game pieces connected in a row, column, or diagonal line. The game is played from the bottom row up, with each player alternating turns and selecting an empty space. A player can only occupy an empty space if it is on the first row or above an occupied space. A player cannot select a space that has an open space directly below it. Lastly, the game is a draw if there is no winner by the time the board fills up.
+#### This project is an online Connect Four game, a two-player game designed to be played using a six-row by seven-column grid. The game's objective is to win by being the first player to have four game pieces connected in a row, column, or diagonal line. Each player alternates turns and selects an empty space. The game is a draw if there is no winner by the time the board fills up.
 
 ---
 
@@ -64,8 +64,8 @@ I am utilizing Trello to begin the planning process and organize the keys task t
 
 ### **_Credits_**
 
-##### Using text decoration to remove html hyperlink: [Here](https://stackoverflow.com/questions/35520973/delete-all-hyperlinks-in-html)
+##### [Using text decoration to remove html hyperlink](https://stackoverflow.com/questions/35520973/delete-all-hyperlinks-in-html)
 
-##### Winning array combinations: [Here](https://github.com/kubowania/connect-four/commit/8f51ca1cd88e9c7dc725189e3ef033f1ccfafa49)
+##### [Winning array combinations](https://github.com/kubowania/connect-four/commit/8f51ca1cd88e9c7dc725189e3ef033f1ccfafa49)
 
 ##### Photos: screenshots of this connect four game
