@@ -31,35 +31,32 @@ I am utilizing Trello to begin the planning process and organize the keys task t
 - Gameboard
 
   - 6 rows by 7 columns
-  - Player 1 and Player game pieces
+  - Player 1 and Player 2 game pieces
 
 - Player turn notification
 
-  - screen display
+  - Current player display
 
 - Win, lose, draw notification
-  - plus play again, or reset score options
+  - Plus play again, or reset score options
 
 ---
 
 ##### Classic Connect 4 Grid
 
-![ClassicGrid](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.ZG5Jsi1igzG3lUGN8CX3MgHaHa%26pid%3DApi&f=1&ipt=ec8740f38eb26c580aa2a9dd936d295dc28982e967ac931735a2eb56e8e79bc0&ipo=images)
+![MyGameDisplay](https://i.postimg.cc/8PCRTkXT/Screen-Shot-2022-10-06-at-6-31-41-PM.png)
 
 ##### Connect 4
 
-![ConnectFourCover](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.N15EQr-L0ZsPrEwtUGfUqwHaHb%26pid%3DApi&f=1&ipt=631e7c72d541a23baffac83fe9f4df29878f7b472b71ed5da746bc37ddbfcd5a&ipo=images)
+![PlayerWins](https://i.postimg.cc/mrW11Tjz/Screen-Shot-2022-10-06-at-6-33-04-PM.png)
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Plan project
-- [ ] start programming Connect Four game
-- [ ] Make 20 meaningful commits throughout the project
 - [ ] Git push final updates
-- [ ] Create Pull request and copy URL for project submission
-- [ ] Submit Project 1 to google classroom
+- [ ] Deploy final project
+- [ ] Update styling and refine game features
 
 ---
 
