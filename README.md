@@ -50,6 +50,8 @@ I am utilizing Trello to begin the planning process and organize the keys task t
 
 ![PlayerWins](https://i.postimg.cc/mrW11Tjz/Screen-Shot-2022-10-06-at-6-33-04-PM.png)
 
+#### [Surge](link to come)
+
 ---
 
 ### **_Future Updates_**
@@ -62,8 +64,8 @@ I am utilizing Trello to begin the planning process and organize the keys task t
 
 ### **_Credits_**
 
-##### Using text decoration to remove html hyperlink: https://stackoverflow.com/questions/35520973/delete-all-hyperlinks-in-html
+##### Using text decoration to remove html hyperlink: #### [Here](https://stackoverflow.com/questions/35520973/delete-all-hyperlinks-in-html)
 
-##### Winning array combinations: https://github.com/kubowania/connect-four/commit/8f51ca1cd88e9c7dc725189e3ef033f1ccfafa49
+##### Winning array combinations: [Here](https://github.com/kubowania/connect-four/commit/8f51ca1cd88e9c7dc725189e3ef033f1ccfafa49)
 
 ##### Photos: screenshots of this connect four game
