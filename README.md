@@ -62,8 +62,8 @@ I am utilizing Trello to begin the planning process and organize the keys task t
 
 ### **_Credits_**
 
-##### Images [DuckDuckGo](https://duckduckgo.com)
+##### Using text decoration to remove html hyperlink: https://stackoverflow.com/questions/35520973/delete-all-hyperlinks-in-html
 
-##### Image 1: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.ZG5Jsi1igzG3lUGN8CX3MgHaHa%26pid%3DApi&f=1&ipt=ec8740f38eb26c580aa2a9dd936d295dc28982e967ac931735a2eb56e8e79bc0&ipo=images
+##### Winning array combinations: https://github.com/kubowania/connect-four/commit/8f51ca1cd88e9c7dc725189e3ef033f1ccfafa49
 
-##### Image 2: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.N15EQr-L0ZsPrEwtUGfUqwHaHb%26pid%3DApi&f=1&ipt=631e7c72d541a23baffac83fe9f4df29878f7b472b71ed5da746bc37ddbfcd5a&ipo=images
+##### Photos: screenshots of this connect four game
