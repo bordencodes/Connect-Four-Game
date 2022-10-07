@@ -42,11 +42,11 @@ I am utilizing Trello to begin the planning process and organize the keys task t
 
 ---
 
-##### Classic Connect 4 Grid
+##### Start of Game
 
-![MyGameDisplay](https://i.postimg.cc/8PCRTkXT/Screen-Shot-2022-10-06-at-6-31-41-PM.png)
+![GameDisplay](https://i.postimg.cc/8PCRTkXT/Screen-Shot-2022-10-06-at-6-31-41-PM.png)
 
-##### Connect 4
+##### Player 1 wins!
 
 ![PlayerWins](https://i.postimg.cc/mrW11Tjz/Screen-Shot-2022-10-06-at-6-33-04-PM.png)
 
