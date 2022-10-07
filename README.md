@@ -16,9 +16,9 @@
 
 ### **_Getting Started_**
 
-I am utilizing Trello to begin the planning process and organize the keys task to complete this project.
+I am utilizing Trello to begin the planning process and organize the key tasks to complete this project.
 
-View [Trello Board](https://trello.com/invite/b/G2YIjiFZ/94aa24b4cacbf9cc5b444ac75d19f22d/week-3-connect-four-game)
+View: [Trello Board](https://trello.com/invite/b/G2YIjiFZ/94aa24b4cacbf9cc5b444ac75d19f22d/week-3-connect-four-game)
 
 ---
 
@@ -50,7 +50,7 @@ View [Trello Board](https://trello.com/invite/b/G2YIjiFZ/94aa24b4cacbf9cc5b444ac
 
 ![PlayerWins](https://i.postimg.cc/mrW11Tjz/Screen-Shot-2022-10-06-at-6-33-04-PM.png)
 
-#### [Surge](http://bordencodes-game.surge.sh/)
+#### View game on: [Surge](http://bordencodes-game.surge.sh/)
 
 ---
 
